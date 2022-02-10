@@ -1,0 +1,21 @@
+boolean[] solution(int[] a, int l, int r) {
+    int  x,y,z;
+    int temp;
+    int len=a.length;
+    boolean[] result=new boolean[len]; 
+    for( int i=0; i<a.length; i++){
+        temp=(i+1);
+        x= a[i]/temp;
+        y=a[i]/x;
+        z=x*y;
+        
+        if( z== a[i] && x>=l && x<=r){
+            result[i]= true;
+        }
+        else{
+            result[i]= false;
+        }
+            }
+            return result;
+
+}

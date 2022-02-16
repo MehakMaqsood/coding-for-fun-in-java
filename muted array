@@ -1,0 +1,22 @@
+int[] solution(int n, int[] a) {
+   int [] result= new int[a.length];
+   int counter=0;
+   int val=n-1;
+   for(int i=1; i<n; i++){
+       
+    if(counter==0){
+        result[i-1]=a[i-1]+a[i];//i=1
+        counter++;
+        }
+      
+    else
+        {result[i-1]=a[i-2]+a[i-1]+a[i];}
+    
+    if(i==val){
+        result[i]=a[i-1]+a[i];} 
+   }
+   if(a.length==1){
+       result[0]=a[0];
+   }
+   return result;
+}
